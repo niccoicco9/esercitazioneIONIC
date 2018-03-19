@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    {{ item.text }}
+  </button>
+
+  <ng-container *ngIf="credenziali">
+    <label>{{credenziali.username}}</label>
+    <label>{{credenziali.password}}</label>
+  </ng-container>
+</ion-content>

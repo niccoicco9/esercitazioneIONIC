@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Explore Nearby
+    </ion-card-header>
+    <ion-list>
+      <ion-list-header>Contact me with an e-mail</ion-list-header>
+      <ion-item *ngFor="let persona of persone">
+        <ion-card (click)="dettaglioPersona(persona)">
+          <img src="{{persona.picture.large}}" />
+          <ion-card-content>
+            <ion-card-title>
+              {{persona.name.first}} {{persona.name.last}}
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
